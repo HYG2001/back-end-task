@@ -40,7 +40,7 @@ t3:
 
 		document.write("There is no second largest element<br>");
 	}
-	let arr= [ 12, 35, 1, 10, 34, 1 ];
+	let arr= [ 27, 22, 25, 7, 17, 1];
 	let n = arr.length;
 	print2largest(arr, n);
 </script>
@@ -69,7 +69,7 @@ function firstNonRepeating(str)
 
 	return res;
 }
-let str = "geeksforgeeks";
+let str = "haneenyasser";
 let index = firstNonRepeating(str);
 if (index == Number.MAX_VALUE)
 	document.write("Either all characters are repeating or string is empty");
