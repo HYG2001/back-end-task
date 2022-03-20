@@ -1,0 +1,101 @@
+t1:
+
+The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client 
+This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.
+
+
+
+
+t2:
+
+most commonly-used HTTP methods are :
+1- POST: for just creating
+2- GET: for just reading
+3- PUT: for replacing or updating
+4- PATCH: for just updating
+5- DELETE: for just deleting
+
+
+
+t3:
+
+<script>
+	function print2largest(arr, arr_size)
+  {
+		let i, first, second;
+		if (arr_size < 2) 
+    {
+			document.write(" Invalid Input ");
+			return;
+		}
+		arr.sort();
+		for (i = arr_size - 2; i >= 0; i--)
+    {
+			if (arr[i] != arr[arr_size - 1]) 
+      {
+				document.write("The second largest element is " + arr[i]);
+				return;
+			}
+		}
+
+		document.write("There is no second largest element<br>");
+	}
+	let arr= [ 12, 35, 1, 10, 34, 1 ];
+	let n = arr.length;
+	print2largest(arr, n);
+</script>
+
+
+
+
+t4:
+
+<script>
+const NO_OF_CHARS = 256
+function firstNonRepeating(str)
+{
+	let arr = new Array(NO_OF_CHARS)
+	for(let i=0;i<NO_OF_CHARS;i++){
+		arr[i] = [0,0];
+	}
+	for (let i=0;i<str.length;i++) {
+		arr[str.charCodeAt(i)][0]++;
+		arr[str.charCodeAt(i)][1]= i;
+	}
+	let res = Number.MAX_VALUE;
+	for (let i = 0; i < NO_OF_CHARS; i++)
+		if (arr[i][0] == 1)
+			res = Math.min(res, arr[i][1]);
+
+	return res;
+}
+let str = "geeksforgeeks";
+let index = firstNonRepeating(str);
+if (index == Number.MAX_VALUE)
+	document.write("Either all characters are repeating or string is empty");
+else
+	document.write("First non-repeating character is ",str[index]);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
